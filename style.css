@@ -41,11 +41,47 @@
     padding: 20px 70px;
 }
 
-img {
+#fotodeperfil img {
     border-radius: 50%;
+    width: 200px;
+    height: 200px;
 }
 
 #seguidores {
     margin-right: 45px;
-    
+}
+
+.juntinhos {
+    margin: 0;
+}
+
+.quasejuntinho {
+    margin-bottom: 0;
+}
+
+#pill {
+    background-color: rgb(180, 180, 180);
+    border-radius: 15px;
+    padding: 5px;
+
+    img {
+        position: relative;
+        top: 3px;
+    }
+}
+
+#paidapill {
+    margin: 10px 0;
+}
+
+#icone-link {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    background-size: 20px;
+    background-image: url('link-icon-png-14.png');
+}
+
+a {
+    text-decoration: none;
 }
