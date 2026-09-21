@@ -13,6 +13,7 @@
 #destaques {
     height: 200px;
     background-color: moccasin;
+    display: flex;
 }
 
 #feed {
@@ -84,4 +85,24 @@
 
 a {
     text-decoration: none;
+}
+
+.destaque {
+    height: 200px;
+    width: 150px;
+    background-color: rgb(231, 242, 189);
+    padding: 33px 25px;
+    box-sizing: border-box;
+    text-align: center;
+    font-weight: 600;
+
+    img {
+        border-radius: 50%;
+    }
+}
+
+#feed {
+    display: flex;
+    flex-wrap: wrap;
+    height: 500px;
 }
