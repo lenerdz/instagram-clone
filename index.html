@@ -1,71 +1,265 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Instagram</title>
+    <title>Gerardo Castro</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <div id="conteudo">
-        <div id="info">
-            <div id="foto">
-                <img src="https://placehold.co/180" alt="Foto de perfil">
-            </div>
-            <div id="texto">
-                <p><strong>Gerardo Castro</strong></p>
-                <p><strong>200</strong> Seguidores - <strong>300</strong> Seguindo</p>
-                <br>
-                <p>Professor de Desenvolvimento Fullstack</p>
-                <p>Aluno de ciência de dados</p>
-                <p>Formado em Jogos</p>
-            </div>
+    <div class="pagina" id="topo">
+        <div class="barra-lateral">
+            <aside class="painel">
+                <div class="painel-topo">
+                    <div class="identidade">
+                        <a class="foto-perfil" href="#perfil-ampliado" aria-label="Ver foto de perfil ampliada">
+                            <img src="imagens/demnxhqx9niicv0qrow2nn7o55xg.jpg" alt="Foto de perfil" width="160"
+                                height="160">
+                        </a>
+                        <div class="identidade-texto">
+                            <h1>Gerardo Castro</h1>
+                            <p class="usuario">@gerardocastro</p>
+                        </div>
+                    </div>
+                    <p class="local">Programador Fullstack · Fortaleza</p>
+                    <p class="bio">Jogos Digitais e Páginas web com Laravel e VUE.js</p>
+
+                    <ul class="estatisticas">
+                        <li><b>12</b> posts</li>
+                        <li><b>25k</b> seguidores</li>
+                        <li><b>6</b> seguindo</li>
+                    </ul>
+
+                    <div class="acoes">
+                        <button type="button" class="primario">Seguir</button>
+                        <a href="https://github.com/lenerdz">Github</a>
+                    </div>
+                </div>
+
+                <section class="destaques" aria-label="Destaques">
+                    <h2>Destaques</h2>
+                    <div class="destaques-janela">
+                        <div class="destaques-trilha">
+                            <a href="#" class="destaque">
+                                <img src="imagens/1666149618.jpg" alt="" width="280" height="360">
+                                <span>Destaque 1</span>
+                            </a>
+                            <a href="#" class="destaque">
+                                <img src="imagens/1707234969.jpg" alt="" width="280" height="360">
+                                <span>Destaque 2</span>
+                            </a>
+                            <a href="#" class="destaque">
+                                <img src="imagens/8dlv43lvkflvak1109nmsfam60ao.jpg" alt="" width="280" height="360">
+                                <span>Destaque 3</span>
+                            </a>
+                            <a href="#" class="destaque">
+                                <img src="imagens/90e2yrpcwqpw7p2szbnr8mu7uqdp.jpg" alt="" width="280" height="360">
+                                <span>Destaque 4</span>
+                            </a>
+                            <a href="#" class="destaque">
+                                <img src="imagens/CompiladoHorizontalDL.png" alt="" width="280" height="360">
+                                <span>Destaque 5</span>
+                            </a>
+                            <a href="#" class="destaque">
+                                <img src="imagens/eotj4h1msof97uyo042hebqklqcf.jpg" alt="" width="280" height="360">
+                                <span>Destaque 6</span>
+                            </a>
+                            <a href="#" class="destaque">
+                                <img src="imagens/1666149618.jpg" alt="" width="280" height="360">
+                                <span>Destaque 1</span>
+                            </a>
+                            <a href="#" class="destaque">
+                                <img src="imagens/1707234969.jpg" alt="" width="280" height="360">
+                                <span>Destaque 2</span>
+                            </a>
+                            <a href="#" class="destaque">
+                                <img src="imagens/8dlv43lvkflvak1109nmsfam60ao.jpg" alt="" width="280" height="360">
+                                <span>Destaque 3</span>
+                            </a>
+                            <a href="#" class="destaque">
+                                <img src="imagens/90e2yrpcwqpw7p2szbnr8mu7uqdp.jpg" alt="" width="280" height="360">
+                                <span>Destaque 4</span>
+                            </a>
+                            <a href="#" class="destaque">
+                                <img src="imagens/CompiladoHorizontalDL.png" alt="" width="280" height="360">
+                                <span>Destaque 5</span>
+                            </a>
+                            <a href="#" class="destaque">
+                                <img src="imagens/eotj4h1msof97uyo042hebqklqcf.jpg" alt="" width="280" height="360">
+                                <span>Destaque 6</span>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+            </aside>
         </div>
-        <div id="destaques">
-            <div class="destaque">
-                <img src="https://placehold.co/100" alt="destaque">
-                <p><b>Destaque 1</b></p>
+
+        <main class="conteudo">
+            <div class="grade">
+                <a class="celula celula--ampla" href="#foto-01">
+                    <img src="imagens/1666149618.jpg" alt="Publicação 1">
+                </a>
+                <a class="celula" href="#foto-02">
+                    <img src="imagens/1707234969.jpg" alt="Publicação 2">
+                </a>
+                <a class="celula" href="#foto-03">
+                    <img src="imagens/8dlv43lvkflvak1109nmsfam60ao.jpg" alt="Publicação 3">
+                </a>
+                <a class="celula" href="#foto-04">
+                    <img src="imagens/90e2yrpcwqpw7p2szbnr8mu7uqdp.jpg" alt="Publicação 4">
+                </a>
+                <a class="celula" href="#foto-05">
+                    <img src="imagens/CompiladoHorizontalDL.png" alt="Publicação 5">
+                </a>
+                <a class="celula" href="#foto-06">
+                    <img src="imagens/eotj4h1msof97uyo042hebqklqcf.jpg" alt="Publicação 6">
+                </a>
+                <a class="celula" href="#foto-07">
+                    <img src="imagens/G_F9f8zXkAAkzvy.jpg" alt="Publicação 7">
+                </a>
+                <a class="celula celula--ampla" href="#foto-08">
+                    <img src="imagens/HK8YvvHbMAA1kE8.jpg" alt="Publicação 8">
+                </a>
+                <a class="celula" href="#foto-09">
+                    <img src="imagens/ie10jjyo1yw3egxyetloz8v48cmb.png" alt="Publicação 9">
+                </a>
+                <a class="celula" href="#foto-10">
+                    <img src="imagens/images (1).jpg" alt="Publicação 10">
+                </a>
+                <a class="celula" href="#foto-11">
+                    <img src="imagens/images (2).jpg" alt="Publicação 11">
+                </a>
+                <a class="celula" href="#foto-12">
+                    <img src="imagens/images (3).jpg" alt="Publicação 12">
+                </a>
+                <a class="celula" href="#foto-13">
+                    <img src="imagens/images (4).jpg" alt="Publicação 13">
+                </a>
+                <a class="celula" href="#foto-14">
+                    <img src="imagens/images.jpg" alt="Publicação 14">
+                </a>
+                <a class="celula" href="#foto-15">
+                    <img src="imagens/o4fc6rxgkiodjvl6qbbk2hye0orn.jpg" alt="Publicação 15">
+                </a>
             </div>
-            <div class="destaque">
-                <img src="https://placehold.co/100" alt="destaque">
-                <p><b>Destaque 2</b></p>
-            </div>
-            <div class="destaque">
-                <img src="https://placehold.co/100" alt="destaque">
-                <p><b>Destaque 3</b></p>
-            </div>
-            <div class="destaque">
-                <img src="https://placehold.co/100" alt="destaque">
-                <p><b>Destaque 4</b></p>
-            </div>
-            <div class="destaque">
-                <img src="https://placehold.co/100" alt="destaque">
-                <p><b>Destaque 5</b></p>
-            </div>
-            <div class="destaque">
-                <img src="https://placehold.co/100" alt="destaque">
-                <p><b>Destaque 6</b></p>
-            </div>
-            <div class="destaque">
-                <img src="https://placehold.co/100" alt="destaque">
-                <p><b>Destaque 7</b></p>
-            </div>
-            
-        </div>
-        <div id="feed">
-            <div class="foto"><img src="https://placehold.co/310x400" alt="foto"></div>
-            <div class="foto"><img src="https://placehold.co/310x400" alt="foto"></div>
-            <div class="foto"><img src="https://placehold.co/310x400" alt="foto"></div>
-            <div class="foto"><img src="https://placehold.co/310x400" alt="foto"></div>
-            <div class="foto"><img src="https://placehold.co/310x400" alt="foto"></div>
-            <div class="foto"><img src="https://placehold.co/310x400" alt="foto"></div>
-            <div class="foto"><img src="https://placehold.co/310x400" alt="foto"></div>
-            <div class="foto"><img src="https://placehold.co/310x400" alt="foto"></div>
-            <div class="foto"><img src="https://placehold.co/310x400" alt="foto"></div>
-            <div class="foto"><img src="https://placehold.co/310x400" alt="foto"></div>
-            <div class="foto"><img src="https://placehold.co/310x400" alt="foto"></div>
-            <div class="foto"><img src="https://placehold.co/310x400" alt="foto"></div>
-        </div>
-    </div>    
+        </main>
+    </div>
+
+    <div class="popup popup--redondo" id="perfil-ampliado">
+        <a class="popup-fundo" href="#topo" aria-label="Fechar"></a>
+        <figure class="popup-caixa">
+            <a class="popup-fechar" href="#topo" aria-label="Fechar">&times;</a>
+            <img src="imagens/demnxhqx9niicv0qrow2nn7o55xg.jpg" alt="Foto de perfil ampliada">
+        </figure>
+    </div>
+
+    <div class="popup" id="foto-01">
+        <a class="popup-fundo" href="#topo" aria-label="Fechar"></a>
+        <figure class="popup-caixa">
+            <a class="popup-fechar" href="#topo" aria-label="Fechar">&times;</a>
+            <img src="imagens/1666149618.jpg" alt="Publicação 1">
+        </figure>
+    </div>
+    <div class="popup" id="foto-02">
+        <a class="popup-fundo" href="#topo" aria-label="Fechar"></a>
+        <figure class="popup-caixa">
+            <a class="popup-fechar" href="#topo" aria-label="Fechar">&times;</a>
+            <img src="imagens/1707234969.jpg" alt="Publicação 2">
+        </figure>
+    </div>
+    <div class="popup" id="foto-03">
+        <a class="popup-fundo" href="#topo" aria-label="Fechar"></a>
+        <figure class="popup-caixa">
+            <a class="popup-fechar" href="#topo" aria-label="Fechar">&times;</a>
+            <img src="imagens/8dlv43lvkflvak1109nmsfam60ao.jpg" alt="Publicação 3">
+        </figure>
+    </div>
+    <div class="popup" id="foto-04">
+        <a class="popup-fundo" href="#topo" aria-label="Fechar"></a>
+        <figure class="popup-caixa">
+            <a class="popup-fechar" href="#topo" aria-label="Fechar">&times;</a>
+            <img src="imagens/90e2yrpcwqpw7p2szbnr8mu7uqdp.jpg" alt="Publicação 4">
+        </figure>
+    </div>
+    <div class="popup" id="foto-05">
+        <a class="popup-fundo" href="#topo" aria-label="Fechar"></a>
+        <figure class="popup-caixa">
+            <a class="popup-fechar" href="#topo" aria-label="Fechar">&times;</a>
+            <img src="imagens/CompiladoHorizontalDL.png" alt="Publicação 5">
+        </figure>
+    </div>
+    <div class="popup" id="foto-06">
+        <a class="popup-fundo" href="#topo" aria-label="Fechar"></a>
+        <figure class="popup-caixa">
+            <a class="popup-fechar" href="#topo" aria-label="Fechar">&times;</a>
+            <img src="imagens/eotj4h1msof97uyo042hebqklqcf.jpg" alt="Publicação 6">
+        </figure>
+    </div>
+    <div class="popup" id="foto-07">
+        <a class="popup-fundo" href="#topo" aria-label="Fechar"></a>
+        <figure class="popup-caixa">
+            <a class="popup-fechar" href="#topo" aria-label="Fechar">&times;</a>
+            <img src="imagens/G_F9f8zXkAAkzvy.jpg" alt="Publicação 7">
+        </figure>
+    </div>
+    <div class="popup" id="foto-08">
+        <a class="popup-fundo" href="#topo" aria-label="Fechar"></a>
+        <figure class="popup-caixa">
+            <a class="popup-fechar" href="#topo" aria-label="Fechar">&times;</a>
+            <img src="imagens/HK8YvvHbMAA1kE8.jpg" alt="Publicação 8">
+        </figure>
+    </div>
+    <div class="popup" id="foto-09">
+        <a class="popup-fundo" href="#topo" aria-label="Fechar"></a>
+        <figure class="popup-caixa">
+            <a class="popup-fechar" href="#topo" aria-label="Fechar">&times;</a>
+            <img src="imagens/ie10jjyo1yw3egxyetloz8v48cmb.png" alt="Publicação 9">
+        </figure>
+    </div>
+    <div class="popup" id="foto-10">
+        <a class="popup-fundo" href="#topo" aria-label="Fechar"></a>
+        <figure class="popup-caixa">
+            <a class="popup-fechar" href="#topo" aria-label="Fechar">&times;</a>
+            <img src="imagens/images (1).jpg" alt="Publicação 10">
+        </figure>
+    </div>
+    <div class="popup" id="foto-11">
+        <a class="popup-fundo" href="#topo" aria-label="Fechar"></a>
+        <figure class="popup-caixa">
+            <a class="popup-fechar" href="#topo" aria-label="Fechar">&times;</a>
+            <img src="imagens/images (2).jpg" alt="Publicação 11">
+        </figure>
+    </div>
+    <div class="popup" id="foto-12">
+        <a class="popup-fundo" href="#topo" aria-label="Fechar"></a>
+        <figure class="popup-caixa">
+            <a class="popup-fechar" href="#topo" aria-label="Fechar">&times;</a>
+            <img src="imagens/images (3).jpg" alt="Publicação 12">
+        </figure>
+    </div>
+    <div class="popup" id="foto-13">
+        <a class="popup-fundo" href="#topo" aria-label="Fechar"></a>
+        <figure class="popup-caixa">
+            <a class="popup-fechar" href="#topo" aria-label="Fechar">&times;</a>
+            <img src="imagens/images (4).jpg" alt="Publicação 13">
+        </figure>
+    </div>
+    <div class="popup" id="foto-14">
+        <a class="popup-fundo" href="#topo" aria-label="Fechar"></a>
+        <figure class="popup-caixa">
+            <a class="popup-fechar" href="#topo" aria-label="Fechar">&times;</a>
+            <img src="imagens/images.jpg" alt="Publicação 14">
+        </figure>
+    </div>
+    <div class="popup" id="foto-15">
+        <a class="popup-fundo" href="#topo" aria-label="Fechar"></a>
+        <figure class="popup-caixa">
+            <a class="popup-fechar" href="#topo" aria-label="Fechar">&times;</a>
+            <img src="imagens/o4fc6rxgkiodjvl6qbbk2hye0orn.jpg" alt="Publicação 15">
+        </figure>
+    </div>
 </body>
+
 </html>

@@ -1,69 +1,405 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-#conteudo {
-    width: 930px;
-    /* height: 100vh; */
-    margin: 0 auto;
-    background-color: rgb(222, 238, 252);
+:root {
+    --bg: #fafafa;
+    --painel: #262626;
+    --destaque: #0095f6;
+    --destaque-hover: #1877f2;
+    --rosa: #e1306c;
+    --roxo: #833ab4;
+    --laranja: #f77737;
+    --amarelo: #fcaf45;
+    --branco: #ffffff;
+    --apagado: #a8a8a8;
+    --texto-suave: #dbdbdb;
+    --fonte-titulo: "Futura", "Trebuchet MS", "Avenir Next", sans-serif;
+    --fonte-corpo: "Avenir Next", Avenir, "Century Gothic", "Trebuchet MS", sans-serif;
+    --espaco: 4px;
+    --painel-pad: clamp(1.1rem, 2.5vw, 2rem);
 }
 
-#info {
-    width: 100%;
-    height: 40vh;
-    background-color: cornsilk;
+body {
+    font-family: var(--fonte-corpo);
+    background: var(--painel);
+    color: #262626;
+    line-height: 1.45;
+    min-height: 100vh;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button {
+    font: inherit;
+    border: none;
+    cursor: pointer;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+.pagina {
     display: flex;
-}
-
-#foto {
-    width: 300px;
-    background-color: honeydew;
-
-    img {
-        width: 180px;
-        border-radius: 50%;
-        margin: 60px;
-    }
-}
-
-#texto {
-    background-color: rgb(199, 255, 212);
-    width: 630px;
-    height: 40vh;
-    padding: 40px;
-    p {
-        margin: 10px;
-    }
-}
-
-#destaques {
+    flex-wrap: wrap;
+    align-items: stretch;
+    min-height: 100vh;
     width: 100%;
-    height: 22vh;
-    background-color: rgb(255, 169, 169);
+}
+
+.barra-lateral {
+    flex: 1 1 36rem;
+    width: min(100%, 36rem);
+    max-width: 100%;
+    background: var(--painel);
+}
+
+.painel {
+    position: sticky;
+    top: 0;
+    background: var(--painel);
+    color: var(--branco);
     display: flex;
-    padding: 10px;
+    flex-direction: column;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+.conteudo {
+    flex: 999 1 22rem;
+    min-width: 0;
+    padding: var(--espaco);
+    background: var(--bg);
+}
+
+.painel-topo {
+    padding: var(--painel-pad) var(--painel-pad) 1.1rem;
+    flex-shrink: 0;
+}
+
+.identidade {
+    display: flex;
+    align-items: center;
+    gap: clamp(0.85rem, 2vw, 1.25rem);
+    margin-bottom: 1rem;
+}
+
+.identidade-texto {
+    min-width: 0;
+}
+
+.foto-perfil {
+    display: block;
+    flex-shrink: 0;
+    border-radius: 50%;
+    overflow: hidden;
+    transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.foto-perfil:hover {
+    transform: scale(1.04);
+    opacity: 0.92;
+}
+
+.foto-perfil img {
+    width: clamp(4.25rem, 10vw, 5.5rem);
+    height: clamp(4.25rem, 10vw, 5.5rem);
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.painel h1 {
+    font-family: var(--fonte-titulo);
+    font-size: clamp(1.45rem, 4vw, 2rem);
+    font-weight: 500;
+    line-height: 1.05;
+    margin-bottom: 0.35rem;
+}
+
+.usuario {
+    color: var(--apagado);
+    font-size: clamp(0.82rem, 1.6vw, 0.9rem);
+    margin-bottom: 0;
+}
+
+.local {
+    color: var(--texto-suave);
+    font-size: clamp(0.78rem, 1.5vw, 0.85rem);
+    margin-bottom: 0.85rem;
+}
+
+.bio {
+    font-size: clamp(0.88rem, 1.8vw, 0.95rem);
+    color: #efefef;
+    margin-bottom: 1rem;
+}
+
+.estatisticas {
+    display: grid;
+    gap: 0.45rem;
+    margin-bottom: 1rem;
+    font-size: clamp(0.78rem, 1.5vw, 0.85rem);
+    color: var(--apagado);
+}
+
+.estatisticas b {
+    color: var(--branco);
+    margin-right: 0.25rem;
+    font-size: 1rem;
+}
+
+.acoes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.primario {
+    flex: 1 1 7rem;
+    min-height: 2.6rem;
+    background: var(--destaque);
+    color: var(--branco);
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.primario:hover {
+    background: var(--destaque-hover);
+    transform: translateY(-1px);
+}
+
+.acoes a {
+    flex: 0 1 auto;
+    padding: 0.65rem 0.9rem;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    font-size: 0.85rem;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.acoes a:hover {
+    background: var(--branco);
+    color: var(--painel);
+}
+
+.destaques {
+    margin-top: 1.25rem;
+    padding: 1rem 0 1.4rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    min-height: 0;
+    width: 100%;
+}
+
+.destaques h2 {
+    font-family: var(--fonte-titulo);
+    font-size: 0.78rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--laranja);
+    padding: 0 var(--painel-pad) 0.85rem;
+}
+
+.destaques-janela {
+    overflow: hidden;
+    width: 100%;
+}
+
+.destaques-trilha {
+    display: flex;
+    gap: clamp(0.55rem, 1.5vw, 0.75rem);
+    width: max-content;
+    padding: 0 var(--painel-pad);
+    animation: carrossel 30s linear infinite;
+}
+
+.destaques-janela:hover .destaques-trilha {
+    animation-play-state: paused;
 }
 
 .destaque {
-    padding: 20px 25px;
-    text-align: center;
-    img {
-        width: 80px;
-        border-radius: 50%;
-    }
+    flex: 0 0 clamp(6.25rem, 16vw, 8.25rem);
+    display: block;
+    transition: transform 0.3s ease;
 }
 
-#feed {
+.destaque:hover {
+    transform: translateY(-4px);
+}
+
+.destaque img {
     width: 100%;
-    height: 40vh;
-    background-color: lightpink;
-    display: flex;
-    flex-wrap: wrap;
-    .foto {
-        
+    height: clamp(7.5rem, 20vw, 10.5rem);
+    object-fit: cover;
+    margin-bottom: 0.45rem;
+    background: #3a3a3a;
+}
+
+.destaque span {
+    font-size: clamp(0.72rem, 1.4vw, 0.8rem);
+    color: var(--texto-suave);
+}
+
+.grade {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-auto-flow: dense;
+    gap: var(--espaco);
+    width: 100%;
+}
+
+.celula {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    background: #efefef;
+    aspect-ratio: 1 / 1;
+    width: 100%;
+    min-width: 0;
+}
+
+.celula--ampla {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.celula img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.45s ease;
+}
+
+.celula:hover img {
+    transform: scale(1.04);
+}
+
+.popup {
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    display: grid;
+    place-items: center;
+    padding: clamp(1rem, 4vw, 2.5rem);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.25s ease, visibility 0.25s ease;
+}
+
+.popup:target {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+body:has(.popup:target) {
+    overflow: hidden;
+}
+
+.popup-fundo {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.82);
+    cursor: pointer;
+}
+
+.popup-caixa {
+    position: relative;
+    z-index: 1;
+    width: fit-content;
+    max-width: min(100%, 56rem);
+    margin: 0;
+}
+
+.popup-caixa img {
+    display: block;
+    width: auto;
+    height: auto;
+    max-width: min(100vw - 2rem, 56rem);
+    max-height: min(85vh, 52rem);
+    object-fit: contain;
+    background: #111;
+}
+
+.popup--redondo .popup-caixa img {
+    width: min(72vw, 28rem);
+    height: min(72vw, 28rem);
+    max-width: min(72vw, 28rem);
+    max-height: min(72vw, 28rem);
+    border-radius: 50%;
+    object-fit: cover;
+    background: #1a1a1a;
+}
+
+.popup-fechar {
+    position: absolute;
+    top: 0.6rem;
+    right: 0.6rem;
+    z-index: 2;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    background: var(--branco);
+    color: var(--painel);
+    font-size: 1.4rem;
+    line-height: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.popup--redondo .popup-fechar {
+    top: 1rem;
+    right: 1rem;
+}
+
+.popup-fechar:hover {
+    background: var(--destaque);
+    color: var(--branco);
+    transform: scale(1.05);
+}
+
+@keyframes carrossel {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50.1%);
     }
 }
 
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation: none !important;
+        transition: none !important;
+    }
+
+    .destaques-trilha {
+        overflow-x: auto;
+        width: auto;
+        max-width: 100%;
+    }
+}
